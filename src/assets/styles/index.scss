@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
