@@ -1,7 +1,8 @@
 <template>
   <div class="block text-center max-w-2xl mx-auto">
+      <h1>{{ count }}</h1>
       <ag-grid-vue
-          class="ag-theme-alpine"
+          class="ag-theme-alpine h-96"
           :columnDefs="columnDefs"
           :rowData="rowData"
           rowSelection="multiple">
@@ -10,21 +11,16 @@
 </template>
 
 <script lang="ts">
-import { AgGridVue } from "ag-grid-vue";
+import { AgGridVue } from 'ag-grid-vue3';
 export default {
-    name: 'SinglePost',
+    name: 'PostsList',
     components: {
       AgGridVue
     },
     props: {
-        count: Number,
-        posts: [],
         columnDefs: [],
-        rowData: []
+        rowData: [],
+        count: Number
     },
-    beforeMount() {
-
-    }
-
 }
 </script>

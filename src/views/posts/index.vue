@@ -1,40 +1,30 @@
 <template>
   <div class="posts text-center">
-    <PostsList v-bind:columnDefs="columnDefs" v-bind:rowData="rowData" />
+    <PostsList v-bind:columnDefs="columnDefs" v-bind:rowData="rowData" v-bind:count="rowData.length" />
   </div>
 </template>
 
 <script lang="ts">
 import PostsList from './components/posts-list.vue';
-export default {
+  export default {
     name: 'Posts',
     components: {
       PostsList,
     },
     data() {
-        return {
-          columnDefs: [
-              { field: 'make' },
-              { field: 'model' },
-              { field: 'price' }
-          ],
-          rowData: [
-            { make: 'Toyota', model: 'Celica', price: 35000 },
-            { make: 'Ford', model: 'Mondeo', price: 32000 },
-            { make: 'Porsche', model: 'Boxter', price: 72000 }
-          ]
-        }
+      return {
+        columnDefs: [
+            { field: 'make' },
+            { field: 'model' },
+            { field: 'price' }
+        ],
+        rowData: null
+      }
     },
-//   beforeMount() {
-
-//     // this.rowData = [
-//     //     { id: 'Toyota', title: 'Celica', userId: 35000 },
-//     //     { id: 'Ford', title: 'Mondeo', userId: 32000 },
-//     //     { id: 'Porsche', title: 'Boxter', userId: 72000 }
-//     // ];    
-//   //   fetch('https://www.ag-grid.com/example-assets/small-row-data.json')
-//   //       .then(result => result.json())
-//   //       .then(rowData => this.rowData = rowData);
-//   // }
-}
+    beforeMount() { 
+      fetch('https://www.ag-grid.com/example-assets/row-data.json')
+          .then(result => result.json())
+          .then(rowData => this.rowData = rowData);
+    }
+  }
 </script>

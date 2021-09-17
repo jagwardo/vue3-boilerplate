@@ -10,9 +10,10 @@
   "dependencies": {
     "@babel/runtime": "^7.15.4",
     "ag-grid-community": "^26.0.0",
-    "ag-grid-vue": "^26.0.0",
+    "ag-grid-vue3": "^26.0.1",
     "core-js": "^3.17.3",
     "vue": "^3.2.11",
+    "vue-class-component": "^8.0.0-rc.1",
     "vue-property-decorator": "^8.0.0",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
