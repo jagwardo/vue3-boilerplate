@@ -1,6 +1,9 @@
 <template>
-  <div class="fixed h-screen w-56 px-4 bg-white shadow-r shadow-lg">
-    <div class="h-3/4 flex flex-col gap-4 text-gray-500 py-14">
+  <div class="fixed h-screen w-56 px-4 pt-8 bg-white shadow-r shadow-lg">
+    <div class="px-5 pb-8 mb-5 border-b">
+      <img alt="company logo" src="../logo-transparent.png" />
+    </div>
+    <div class="h-3/4 flex flex-col gap-4 text-gray-500">
       <router-link
         to="/"
         exact
@@ -15,9 +18,12 @@
           transition
           duration-200
           ease-in
+          font-bold
+          text-gray-500
+          rounded-lg
         "
       >
-        <span>Home</span>
+        <span>Dashboard</span>
       </router-link>
       <router-link
         to="posts"
@@ -32,6 +38,9 @@
           transition
           duration-200
           ease-in
+          font-bold
+          text-gray-500
+          rounded-lg
         "
       >
         <span class="hover:text-black transition duration-200 ease-linear">Posts</span>
@@ -49,6 +58,9 @@
           transition
           duration-200
           ease-in
+          font-bold
+          text-gray-500
+          rounded-lg
         "
       >
         <span class="hover:text-black transition duration-200 ease-linear">About</span>

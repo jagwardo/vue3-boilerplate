@@ -1,6 +1,6 @@
 <template>
-  <div class="posts text-center">
-    <PostsList v-bind:columnDefs="columnDefs" v-bind:rowData="rowData" v-bind:count="rowData.length" />
+  <div v-if="rowData" class="posts text-center">
+    <PostsList v-bind:columnDefs="columnDefs" v-bind:rowData="rowData" v-bind:count="totalData" />
   </div>
 </template>
 
@@ -14,17 +14,18 @@ import PostsList from './components/posts-list.vue';
     data() {
       return {
         columnDefs: [
-            { field: 'make' },
-            { field: 'model' },
-            { field: 'price' }
+            { headerName: 'ID', field: 'ID' },
+            { headerName: 'Title', field: 'Title' },
+            { headerName: 'Author', field: 'Author.FirstName' }
         ],
-        rowData: null
+        rowData: null,
+        totalData: null,
       }
     },
     beforeMount() { 
-      fetch('https://www.ag-grid.com/example-assets/row-data.json')
+      fetch(`${process.env.VUE_APP_API_BASE_URL}/posts/`)
           .then(result => result.json())
-          .then(rowData => this.rowData = rowData);
+          .then(rowData => {this.rowData = rowData["Data"], this.totalData=rowData["TotalData"]});
     }
   }
 </script>

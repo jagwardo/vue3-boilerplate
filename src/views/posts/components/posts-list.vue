@@ -1,5 +1,5 @@
 <template>
-  <div class="block text-center max-w-2xl mx-auto">
+  <div class="block text-center mx-auto">
       <h1>{{ count }}</h1>
       <ag-grid-vue
           class="ag-theme-alpine h-96"

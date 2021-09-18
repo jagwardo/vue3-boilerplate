@@ -1,6 +1,6 @@
 <template>
   <SideBar />
-  <div class="container" id="view-container">
+  <div class="container view-container bg-white shadow-lg">
     <router-view />
   </div>
 </template>

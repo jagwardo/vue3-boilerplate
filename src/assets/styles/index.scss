@@ -10,8 +10,9 @@
 
 
 body {
-  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  @apply bg-gray-50;
 }
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -35,10 +36,10 @@ body {
     }
   }
 
-#view-container{
-  width: calc(100vw - 14rem);
+.view-container{
+  width: calc(100vw - 16rem);
   position: fixed;
-  left: 14rem;
+  left: 15rem;
   top: 4rem;
   padding: 24px;
   overflow: auto;
