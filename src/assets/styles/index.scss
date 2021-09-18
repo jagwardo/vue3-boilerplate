@@ -40,13 +40,22 @@ body {
   width: calc(100vw - 16rem);
   position: fixed;
   left: 15rem;
-  top: 4rem;
+  top: 8rem;
   padding: 24px;
   overflow: auto;
 }
 
+.navbar-container{
+  width: calc(100vw - 16rem);
+  position: fixed;
+  left: 15rem;
+  top: 0rem;
+  overflow: visible;
+  z-index: 1000;
+}
+
 .router-link-exact-active {
-  background-color: #1b426a;
+  background-color: #2392a8;
   color: #fff
 }
 
