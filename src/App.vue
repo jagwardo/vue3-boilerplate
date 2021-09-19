@@ -1,7 +1,7 @@
 <template>
   <SideBar />
   <Navbar />
-  <div class="container view-container bg-white shadow-lg">
+  <div class="container view-container h-screen bg-white shadow-lg">
     <router-view />
   </div>
 </template>

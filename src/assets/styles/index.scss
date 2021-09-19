@@ -38,11 +38,12 @@ body {
 
 .view-container{
   width: calc(100vw - 16rem);
+  height: calc(100vh - 9rem);
   position: fixed;
   left: 15rem;
   top: 8rem;
   padding: 24px;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .navbar-container{
