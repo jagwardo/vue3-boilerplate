@@ -29,7 +29,7 @@
         <span class="hover:text-black transition duration-200 ease-linear ml-5">Dashboard</span>
       </router-link>
       <router-link
-        to="posts"
+        to="/posts"
         class="
           pl-5
           text-sm
@@ -53,7 +53,7 @@
         <span class="hover:text-black transition duration-200 ease-linear ml-5">Posts</span>
       </router-link>
       <router-link
-        to="about"
+        to="/about"
         class="
           pl-5
           text-sm
